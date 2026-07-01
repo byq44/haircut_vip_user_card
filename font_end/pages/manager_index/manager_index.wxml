@@ -1,0 +1,14 @@
+    <view class='container'>
+      <text id="helloUser">{{helloUser}}</text> 
+      <view class="functionalArea">
+        <button style="width: 340rpx;height: 150rpx;" class="functionalButton"
+        bindtap="vipPurchase">会员建卡</button>
+        <button style="width: 340rpx;height: 150rpx;" class="functionalButton"
+        bindtap="vipSearchFun">消费-查询</button>
+        <button style="width: 340rpx;height: 150rpx;padding-left: 80rpx;padding-right: 80rpx;" class="functionalButton"
+        bindtap="cardMethodManage">卡类目</button>
+        <button style="width: 340rpx;height: 150rpx;" class="functionalButton"
+        bindtap="expenseProjectManage">充值卡服务项目</button>
+      </view>
+    </view>
+      

@@ -1,0 +1,25 @@
+<view class="container">
+    <view class="infoInputView">
+      <text style="font-size: 50rpx;">服务项目</text>
+      <view class="infoSingleInputView">
+        <text>名称：</text>
+        <input type="text" value="{{name}}" maxlength="30" bindinput="onNameChange" class="infoInput"></input>
+      </view>
+      <view class="infoSingleInputView">
+        <text>金额：</text>
+        <input type="number" value="{{price}}"  maxlength="5" bindinput="onPriceChange" class="infoInput"></input>
+      </view>
+      <button class="addProjectB" bindtap="addProject" style="margin-right: 0;">确认</button>
+      <text style="font-size:36rpx;letter-spacing: 4rpx;">注：点击可删除未消费的项目类型</text>
+    </view>
+
+    <view class="projectInfoBorder">
+      <scroll-view scroll-y="true" style="height: inherit;">
+        <!-- 项目内容 --> 
+        <view class="projectBorder" wx:for="{{projectInfo}}" bindtap="alterProject" data-projectid="{{item.project_id}}">
+          <text>名称：{{item.project_name}}</text>
+          <text>金额：{{item.project_price}}元</text>
+        </view>
+      </scroll-view>
+    </view>
+</view>

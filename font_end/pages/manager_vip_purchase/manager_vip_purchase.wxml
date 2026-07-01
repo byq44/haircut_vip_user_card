@@ -1,0 +1,40 @@
+<view class="container">
+    <view class="infoInputView">
+      <text style="font-size: 50rpx;">会员{{purchaseOptions}}</text>
+      <block wx:if="{{purchaseOptions == '建卡'}}">
+        <view class="infoSingleInputView">
+          <text>号码：</text>
+          <input type="number" placeholder="支持6-11位数字"  maxlength="11" value="{{phone}}" bindinput="onPhoneChange" class="infoInput"></input>
+        </view>
+        <view class="infoSingleInputView">
+          <text>备注：</text>
+          <input type="text" maxlength="30" placeholder="最多30字"  bindinput="onNoteChange" class="infoInput"></input>
+        </view>
+      </block>
+      <block wx:else>
+        <view class="infoSingleInputView"><text>号码：{{phone}}</text></view>
+        <view class="infoSingleInputView"><text>备注：{{notes}}</text></view>
+      </block>
+    </view>
+
+    <view class="methodView">
+      <text style="font-size: 45rpx;">卡类目</text>
+      <text style="font-size: 36rpx;">(输入号码点击卡片{{purchaseOptions}})</text>
+      <view class="methodInfoBorder">
+        <scroll-view scroll-y="true" style="height: inherit;">
+          <!-- 卡类型 -->
+          <view class="methodBorder" wx:for="{{methodInfo}}" bindtap="vipPurchase" data-methodid="{{item.method_id}}">
+            <text>名称：{{item.name}}</text>
+            <block wx:if="{{item.type == 0}}">
+              <text>总额：{{item.total_amount}}次</text>
+            </block>
+            <block wx:else>
+              <text>总额：{{item.total_amount}}元</text>
+              <text>折扣：{{item.discount}}%</text>
+            </block>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    
+</view>

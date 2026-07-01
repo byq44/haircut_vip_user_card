@@ -1,0 +1,33 @@
+
+.container {
+  margin-top: 80rpx;
+}
+
+#helloUser {
+  font-size: 60rpx;
+  font-weight: bold;
+  font-family: Harrington, monospace;
+  word-wrap: break-word;
+  margin-left: 55rpx;
+}
+
+.functionalArea {
+  display: flex; 
+  flex-wrap: wrap;
+  margin-top: 60rpx;
+}
+.functionalButton {
+  font-size:45rpx;
+  margin-top: 60rpx;
+  border: 1px solid #d8d7d7;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .15);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* color: rgb(241, 241, 241);
+  background-color: #fda82e; */
+  letter-spacing: 9rpx;
+  
+
+}

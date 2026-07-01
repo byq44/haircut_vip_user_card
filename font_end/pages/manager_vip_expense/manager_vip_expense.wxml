@@ -1,0 +1,25 @@
+<view class="container">
+    <view class="infoInputView">
+      <text style="font-size: 50rpx;">会员消费</text>
+      <view class="infoSingleInputView"><text>号码：{{phone}}</text></view>
+      <view class="infoSingleInputView"><text>备注：{{notes}}</text></view>
+    </view>
+
+    <view class="cardView">
+      <text style="font-size: 42rpx;">选择卡片进行消费</text>
+      <view class="cardInfoBorder">
+        <scroll-view scroll-y="true" style="height: inherit;">
+          <!-- 卡 -->
+          <view class="cardBorder" wx:for="{{vipCardInfo}}" bindtap="vipExpense" data-cardid="{{item.card_id}}" data-name="{{item.name}}" data-type="{{item.type}}" data-totalamount="{{item.total_amount}}" data-remainderamount="{{item.remainder_amount}}" data-discount="{{item.discount}}">
+              <text>名称：{{item.name}}</text>
+              <block wx:if="{{item.type == 1}}">
+                <text>消费折扣：{{item.discount}}%</text>
+              </block>
+              <text>{{item.total_amount}}</text>
+              <text>{{item.remainder_amount}}</text>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    
+</view>
