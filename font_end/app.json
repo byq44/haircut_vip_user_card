@@ -1,0 +1,24 @@
+{
+  "pages": [
+    "pages/user_router/user_router",
+    "pages/vip_user_index/vip_user_index",
+    "pages/vip_user_expense_record/vip_user_expense_record",
+    "pages/manager_index/manager_index",
+    "pages/manager_vip_purchase/manager_vip_purchase",
+    "pages/manager_card_method_manage/manager_card_method_manage",
+    "pages/manager_expense_project_manage/manager_expense_project_manage",
+    "pages/manager_vip_expense/manager_vip_expense",
+    "pages/manager_vip_expense_detail/manager_vip_expense_detail",
+    "pages/manager_vip_manage/manager_vip_manage",
+    "pages/manager_vip_search_fun/manager_vip_search_fun"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "辅助记账簿",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "style": "v2",
+  "componentFramework": "glass-easel",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

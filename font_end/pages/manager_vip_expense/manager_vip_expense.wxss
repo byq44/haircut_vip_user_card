@@ -1,0 +1,48 @@
+
+.container {
+  margin-top: 20rpx;
+}
+
+.infoInputView {
+  font-size: 43rpx;
+  margin-left: 50rpx;
+  width: 650rpx;
+}
+
+.infoSingleInputView {
+  display: flex;
+  margin-top: 32rpx;
+}
+
+.infoInput {
+  border: 1px solid #3d3d3d;
+  font-size: 43rpx;
+  height: 60rpx;
+  width: 450rpx;
+}
+
+.cardView {
+  margin-top: 40rpx;
+  margin-left: 50rpx;
+}
+
+.cardInfoBorder {
+  width: 650rpx;
+  height: 830rpx;
+  border: 1px solid #b9b9b9;
+  box-shadow: 0 6px 25px 0 rgba(0, 0, 0, .1);
+}
+
+.cardBorder {
+  display: flex;
+  flex-direction: column;
+  margin:15rpx 10rpx 20rpx 10rpx;
+  border: 1px solid #d8d7d7;
+  box-shadow: 0 3px 30px 0 rgba(0, 0, 0, .1);
+  border-radius: 10px;
+/* #fda82e #fd9f1c */
+  font-size: 41rpx;
+  text-indent: 20rpx;
+  line-height: 65rpx;
+  
+}

@@ -1,0 +1,40 @@
+<view class="container">
+    <view class="infoInputView">
+      <text style="font-size: 50rpx;">卡类目</text>
+      <view class="infoSingleInputView">
+        <text>名称：</text>
+        <input type="text" placeholder="最多30字" bindinput="onNameChange" value="{{name}}" maxlength="30" class="infoInput"></input>
+      </view>
+      <view class="infoSingleInputView">
+        <text>总额：</text>
+        <input type="number" placeholder="最多5位整数" bindinput="onAmountChange" value="{{totalAmount}}"  maxlength="5" class="infoInput"></input>
+      </view>
+      <view class="infoSingleInputView">
+        <text>折扣：</text>
+        <input type="number" placeholder="整数" value="{{discount}}" bindinput="onDiscountChange" maxlength="2" class="infoInput"  style="width: 120rpx;text-align: right;"></input>%
+        <text style="margin-left: 70rpx;">充值类：</text>
+        <label class="checkbox">
+          <checkbox checked="{{checkboxValue}}" bindtap="checkboxChange"/>
+        </label>
+      </view>
+      <button class="addCard" bindtap="addCard" style="margin-right: 0;">确认</button>
+      <text style="font-size:36rpx;letter-spacing: 4rpx;">注：点击可删除未消费的卡类目</text>
+    </view>
+
+    <view class="cardInfoBorder">
+      
+      <scroll-view scroll-y="true" style="height: inherit;">
+        <!-- 卡内容 或 充值内容 --> 
+        <view class="cardBorder" wx:for="{{methodInfo}}" bindtap="alterCard" data-methodid="{{item.method_id}}">
+          <text>名称：{{item.name}}</text>
+          <block wx:if="{{item.type == 0}}">
+            <text>总额：{{item.total_amount}}次</text>
+          </block>
+          <block wx:elif="{{item.type == 1}}">
+            <text>总额：{{item.total_amount}}元</text>
+          </block>
+          <text wx:if="{{item.discount}}">折扣：{{item.discount}}%</text>
+        </view>
+      </scroll-view>
+    </view>
+</view>

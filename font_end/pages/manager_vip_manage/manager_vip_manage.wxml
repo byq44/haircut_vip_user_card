@@ -1,0 +1,30 @@
+<view class="container">
+    <view class="infoInputView">
+      <text style="font-size: 55rpx;">消费记录</text>
+      <view class="infoSingleInputView"><text>号码：{{phone}}</text></view>
+        <view class="infoSingleInputView"><text>备注：{{notes}}</text></view>
+    </view>
+
+    <view class="functionalArea">
+      <button style="width: 360rpx;height: 110rpx;margin-right: 0;" class="functionalButton" bindtap="expenseRecord">所有卡消费记录</button>
+    </view>
+
+    <view class="cardView">
+      <text style="font-size: 42rpx;">拥有会员卡</text>
+      <text style="font-size:36rpx;letter-spacing: 4rpx;">注：点击卡片查看该卡消费记录</text>
+      <view class="cardInfoBorder">
+        <scroll-view scroll-y="true" style="height: inherit;">
+          <!-- 卡 -->
+          <view class="cardBorder" wx:for="{{vipCardInfo}}" bindtap="expenseRecord" data-cardid="{{item.card_id}}">
+              <text>名称：{{item.name}}</text>
+              <block wx:if="{{item.type == 1}}">
+                <text>消费折扣：{{item.discount}}%</text>
+              </block>
+              <text>{{item.total_amount}}</text>
+              <text>{{item.remainder_amount}}</text>
+          </view>
+        </scroll-view>
+      </view>
+    </view>
+    
+</view>

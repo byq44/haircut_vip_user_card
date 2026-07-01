@@ -1,0 +1,29 @@
+<view class="expenseRecord">
+  <view class="title">
+    <text style="font-size:53rpx;">消费记录</text>
+    <text style="font-size:43rpx;">号码：{{userPhone}}</text>
+    <block  wx:if="{{cardName}}">
+      <text style="font-size:40rpx;">名称：{{cardName}}</text>
+      <text style="font-size:38rpx;">{{cardRemaindAndDiscount}}</text>
+    </block>
+    
+    <button class="sortButton" style="margin-right: 0%;width: 300rpx;height: 75rpx;" bindtap="resetSort">{{sortType}}</button>
+  </view>
+
+  <view class="expenseRecordBorder">
+    <scroll-view scroll-y="true" style="height: inherit;">
+      <!-- 记录 -->
+      <view class="recordInfoBorder" wx:for="{{recordInfo}}">
+        <text>名称：{{item.name}}</text>
+        <text wx:if="{{item.project_name}}">消费项目：{{item.project_name}}</text>
+        <text>消费时间：{{item.expense_time}}</text>
+        <view>{{item.expense_amount}}
+          <block wx:if="{{item.type == 1}}">
+            <text class="discountPrice">{{item.project_price}}元</text>
+          </block>
+        </view>
+        <text>{{item.now_remainder_amount}}</text>
+      </view>
+    </scroll-view>
+  </view>
+</view>

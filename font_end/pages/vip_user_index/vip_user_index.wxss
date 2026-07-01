@@ -1,0 +1,97 @@
+
+.title {
+  margin-top: 10rpx;
+  margin-left: 70rpx;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+#helloUser {
+  font-size: 60rpx;
+  font-weight: bold;
+  font-family: Harrington, monospace;
+  word-wrap: break-word;
+}
+
+#userPhone {
+  margin-top: 25rpx;
+  font-size: 40rpx;
+  display: flex;
+}
+
+#userPhoneBind {
+  margin: 0;
+  width: 240rpx;
+  height: 70rpx;
+  font-size: 36rpx;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.businessHoursTitle {
+  margin-top: 20rpx;
+  font-size: 45rpx;
+}
+.businessHours {
+  font-size: 40rpx;
+}
+
+.functionalArea {
+  display: flex;
+  margin-top: 20rpx;
+  width: 700rpx;
+}
+.functionalButton {
+  font-size:45rpx;
+  border: 1px solid #d8d7d7;
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, .15);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* color: rgb(241, 241, 241);
+  background-color: #fda82e; */
+  letter-spacing: 7rpx;
+  padding: 0;
+  
+
+}
+
+/* .functionalButton:active {
+  background-color: #ff9a0c;
+} */
+
+.vipInfo {
+  margin-top: 22rpx;
+  margin-left: 50rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.vipInfoBorder {
+  margin-top: 5rpx;
+  width: 650rpx;
+  height: 540rpx;
+  border: 1px solid #b9b9b9;
+  box-shadow: 0 6px 25px 0 rgba(0, 0, 0, .1);
+
+}
+
+.cardBorder {
+  display: flex;
+  flex-direction: column;
+  margin:15rpx 10rpx 20rpx 10rpx;
+  
+  border: 1px solid #d8d7d7;
+  box-shadow: 0 3px 30px 0 rgba(0, 0, 0, .1);
+  border-radius: 10px;
+/* #fda82e #fd9f1c */
+  font-size: 41rpx;
+  text-indent: 20rpx;
+  line-height: 65rpx;
+  
+}

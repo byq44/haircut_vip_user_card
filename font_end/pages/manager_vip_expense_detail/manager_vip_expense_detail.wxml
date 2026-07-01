@@ -1,0 +1,44 @@
+<view class="container">
+    <view class="infoInputView">
+      <view class="infoSingleInputView">
+        <text>名称：{{name}}</text>
+      </view>
+      <view class="infoSingleInputView">
+        <text>{{remainderamount}}</text>
+        <text style="text-indent: 50rpx;">{{totalamount}}</text>
+      </view>
+      <view class="infoSingleInputView">
+        <text>消费额：</text>
+        <block wx:if="{{type == 0}}">
+          <input type="number" value="1" maxlength="2" bindinput="onExpenseAmountInputChange" class="infoInput"></input>次
+        </block>
+        <block wx:elif="{{type == 1}}">
+          <text>{{expenseamount}}</text>
+          <text style="text-indent: 50rpx;">项目：{{projectname}}</text>
+        </block>
+
+      </view>
+      
+      <block wx:if="{{type == 1}}">
+        <view class="infoSingleInputView">
+          <text>折扣：{{discount}}%</text>
+        </view>
+      </block>
+
+      <button class="confirmExpense" bindtap="confirmExpense" style="margin-right: 0;">确认消费</button>
+    </view>
+
+    <block wx:if="{{type == 1}}">
+      <view class="projectInfoBorder">
+        <scroll-view scroll-y="true" style="height: inherit;">
+          <!-- 项目内容 --> 
+          <view class="projectBorder" wx:for="{{projectInfo}}" bindtap="calculateProjectExpenseButt" data-projectid="{{item.project_id}}" data-projectprice="{{item.project_price}}" data-projectname="{{item.project_name}}">
+            <text>名称：{{item.project_name}}</text>
+            <text>金额：{{item.project_price}}元</text>
+          </view>
+        </scroll-view>
+      </view>
+    </block>
+
+    
+</view>
